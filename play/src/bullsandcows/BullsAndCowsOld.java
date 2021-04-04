@@ -2,7 +2,7 @@ package bullsandcows;
 
 import java.util.Scanner;
 
-public class BullsAndCows {
+public class BullsAndCowsOld {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -14,24 +14,24 @@ public class BullsAndCows {
 		System.out.println("없는 숫자가 입력되었을 경우 아웃(O)의 카운트가 올라갑니다.");
 		System.out.println("---------------------------------------------------------------------");
 		// 여기까지
-		int[] taget = new int[4];
-		taget[0] = (int) (Math.random() * 10);
+		int[] target = new int[4];
+		target[0] = (int) (Math.random() * 10);
 
 		do {
-			taget[1] = (int) (Math.random() * 10);
-		} while (taget[1] == taget[0]);
+			target[1] = (int) (Math.random() * 10);
+		} while (target[1] == target[0]);
 
 		do {
-			taget[2] = (int) (Math.random() * 10);
-		} while (taget[2] == taget[0] || taget[2] == taget[1]);
+			target[2] = (int) (Math.random() * 10);
+		} while (target[2] == target[0] || target[2] == target[1]);
 
 		do {
-			taget[3] = (int) (Math.random() * 10);
-		} while (taget[3] == taget[0] || taget[3] == taget[1] || taget[3] == taget[2]);
+			target[3] = (int) (Math.random() * 10);
+		} while (target[3] == target[0] || target[3] == target[1] || target[3] == target[2]);
 		
 		/*
 		for(int i = 0; i<taget.length; i++) {
-		System.out.print(taget[i]);
+		System.out.print(target[i]);
 		}
 		*/
 		
@@ -50,7 +50,7 @@ public class BullsAndCows {
 			for(int k = 0; k<4; k++) {
 				int check = Integer.parseInt(insert.substring(k, k+1));
 				for(int n = 0; n<4; n++) {
-					if(check == taget[n]) {
+					if(check == target[n]) {
 						ball ++;
 						if(k==n) {
 							ball --;
@@ -61,8 +61,8 @@ public class BullsAndCows {
 					}
 					if(strike == 4) {
 						System.out.print("정답입니다. (");
-						for(int m = 0;m<taget.length;m++) {
-							System.out.print(taget[m]);
+						for(int m = 0;m<target.length;m++) {
+							System.out.print(target[m]);
 						}
 						System.out.print(")");
 						System.exit(0);
@@ -75,8 +75,8 @@ public class BullsAndCows {
 		}
 		
 		System.out.print("실패했습니다. (정답 : ");
-		for(int m = 0;m<taget.length;m++) {
-			System.out.print(taget[m]);
+		for(int m = 0;m<target.length;m++) {
+			System.out.print(target[m]);
 		}
 		System.out.print(")");
 		
