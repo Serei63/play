@@ -32,5 +32,6 @@ public class BullsAndCows {
 
 	public void checkNum(String checkNum) {
 		
+		
 	}
 }
