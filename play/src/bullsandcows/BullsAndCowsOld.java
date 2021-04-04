@@ -14,7 +14,7 @@ public class BullsAndCowsOld {
 		System.out.println("없는 숫자가 입력되었을 경우 아웃(O)의 카운트가 올라갑니다.");
 		System.out.println("---------------------------------------------------------------------");
 		// 여기까지
-		int[] target = new int[4];
+		int[] target = new int[4]; 
 		target[0] = (int) (Math.random() * 10);
 
 		do {
