@@ -30,9 +30,11 @@ public class BullsAndCowsOld {
 		} while (target[3] == target[0] || target[3] == target[1] || target[3] == target[2]);
 		
 		/*
-		for(int i = 0; i<taget.length; i++) {
-		System.out.print(target[i]);
+		 String aaa = new String();
+		for(int i = 0; i<target.length; i++) {
+		aaa += target[i] + "";
 		}
+		System.out.print(aaa);
 		*/
 		
 		Scanner sc = new Scanner(System.in);
